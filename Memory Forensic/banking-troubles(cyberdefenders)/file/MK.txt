@@ -1,0 +1,3 @@
+Loaded 4 password hashes with no different salts (NT [MD4 256/256 AVX2 8x3])
+Remaining 3 password hashes with no different salts
+password         (Administrator)     
