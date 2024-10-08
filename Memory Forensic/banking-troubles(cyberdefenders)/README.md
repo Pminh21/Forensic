@@ -37,8 +37,11 @@ Enumerating Processes
 ```
 ![image 5](image/5.png)
 - Ở đây ta thấy tiến trình AcroRD32.exe. Tiến trình của Adobe Acrobat Reader, một phần mềm phổ biến được sử dụng để xem, in và chú thích các tài liệu PDF
+
 Q4: Which process was most likely responsible for the initial exploit? AcroRD32.exe
+
 Q5: What is the extension of the malicious file retrieved from the process responsible for the initial exploit? PDF
+
 Q6: Suspicious processes opened network connections to external IPs. One of them starts with "2". Provide the full IP.
 - Tiến trình AcroRD32.exe có PID là 888 
 ![image 6](image/2.png)
