@@ -58,6 +58,8 @@ Q8: Extract files from the initial process. One file has an MD5 hash ending with
 ./volatility_2.6_lin64_standalone -f Bob.vmem --profile WinXPSP2x86 memdump --pid 1752 --dump-dir=output
 ```
 - kiem tra loai file
+
+- su dung foremost de giai nen dmp
 ![image 8](image/7.png)
 - Loai file nghi ngo la .pdf cd vao no 
 - Su dung lenh de tim kiem file co ma MD5 528afe08e437765cc
@@ -68,3 +70,19 @@ md5sum * | grep "528afe08e437765cc"
 - Ten file  00601560.pdf
 
 Q9 What was the PID of the process that loaded the file PDF.php? 1752
+
+--------------------------------------------------------------
+Q10: The JS includes a function meant to hide the call to function eval(). Provide the name of that function.
+- Doi ten file cho de phan biet
+```
+mv 00601560.pdf Malicious_pdf.pdf
+```
+![alt text](image.png)
+```
+python2 pdf-parser.py --raw -o 1054 -f output/output/pdf/Malicious_pdf.pdf -d mal.js
+python3 -m venv venv
+source venv/bin/activate
+js-beautify mal.js | grep "eval"
+HNQYxrFW(eval, VIfwHVPz(xtdxJYVm, JkYBYnxN), BGmiwYYc);
+```
+![alt text](image-1.png)

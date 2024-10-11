@@ -19,3 +19,11 @@ Q4: Attackers often change some settings to facilitate lateral movement within a
 - Lệnh EXEC sp_configure 'xp_cmdshell', 1 được sử dụng trong SQL Server để kích hoạt tính năng xp_cmdshell, một stored procedure mở rộng cho phép thực thi các lệnh hệ điều hành thông qua SQL Server. 
 ![image 4](image/4.png)
 => xp_cmdshell
+
+------------------------------------------------------------------------------
+Q5: Process injection is often used by attackers to escalate privileges within a system. What process did the attacker inject the C2 into to gain administrative privileges?
+![image 5](image/5.png)
+- msfconsole la metasploit
+=> winlogon.exe
+
+------------------------------------------------------------------------------
