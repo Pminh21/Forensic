@@ -37,6 +37,7 @@ Q7: PCAP: Please identify the Gateway IP address of the LAN because the infrastr
 ------------------------------------------------------------------------------
 
 Q8: IR: According to the IDS alert, the Zeus bot attempted to ping an external website to verify connectivity. What was the IP address of the website pinged?
+
 ip.src == 172.16.0.109
 
 ![image 6](image/6.png)
@@ -49,3 +50,24 @@ Q9: PCAP: The infrastructure team also requests that you identify the filename o
 => cf.bin
 
 --------------------------------------------------------------------------------
+
+Q10: PCAP: No other users accessed the development.wse.local WordPress site during the timeline of the incident and the reports indicate that an account successfully logged in from the external interface. Please provide the password they used to log in to the WordPress page around 6:59 PM EST?
+
+- Phân tích frame trên trong ngữ cảnh giao thức HTTP cho thấy đây là một yêu cầu POST được gửi tới một trang đăng nhập WordPress (wp-login.php) từ máy nguồn (172.16.0.109) đến máy đích (172.16.0.108), qua cổng 80 (HTTP). 
+![image 8](image/8.png)
+=> wM812ugu
+Time: 22.59.58 UTC
+
+--------------------------------------------------------------------------------
+
+Q11: PCAP: After reporting that the WordPress page was indeed accessed from an external connection, your boss comes to you in a rage over the potential loss of confidential top-secret documents. He calms down enough to admit that the design's page has a separate access code outside to ensure the security of their information. Before storming off he provided the password to the designs page “1qBeJ2Az” and told you to find a timestamp of the access time or you will be fired. Please provide the time of the accessed Designs page?
+
+![image 9](image/9.png)
+
+- 172.16.0.109 connect 172.16.0.108 22:59:58 UTC sau do du lieu bi mat
+
+=> 23:04:04 UTC 
+
+--------------------------------------------------------------------------------
+
+PCAP: What is the source port number in the shellcode exploit? Dest Port was 31708 IDS Signature GPL SHELLCODE x86 inc ebx NOOP
